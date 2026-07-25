@@ -65,7 +65,7 @@ export default async function AdminBannersPage() {
               No banners found.
             </div>
           ) : (
-            banners.map(banner => (
+            banners.map((banner: import("@prisma/client").Banner) => (
               <div key={banner.id} className="bg-card rounded-2xl border border-border/40 p-6 shadow-sm flex items-center gap-6">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src={banner.imageUrl} alt={banner.title} className="w-32 h-20 object-cover rounded-lg bg-muted" />
